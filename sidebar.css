@@ -98,3 +98,11 @@ body{
 
 }
 
+/* gif */
+
+.gif {
+    display: flex;
+    justify-content: flex-end;
+    height: 100vh;
+    align-items: flex-end;
+}
