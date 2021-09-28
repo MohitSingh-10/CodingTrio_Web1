@@ -9,6 +9,9 @@
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" media="screen and (max-width:800px)" href="responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -22,7 +25,7 @@
                 <li><a href="#"><i class="fas fa-project-diagram"></i>Portfolio</a></li>
                 <li><a href="#"><i class="fas fa-blog"></i>Blogs</a></li>
                 <li><a href="#"><i class="fas fa-address-book"></i>Contact</a></li>
-                <li><a href="#"><i class="fas fa-map-pin"></i>Maps</a></li>
+                <li><a href="https://www.google.com/maps" target="blank"><i class="fas fa-map-pin"></i>Maps</a></li>
             </ul>
 
             <div class="social_media">
@@ -34,9 +37,9 @@
         </div>
 
         <div class="main_content">
-            <div class="header">Welcome!! have a nice day.</div>
+            <div class="header"><b> Welcome!! have a nice day</b></div>
             <div class="info">
-                <div class="container">Lodem ipsum dolor sit amet consectetur adipisicing elit. Mollitia explicabo illo culpa veritatis repudiandae obcaecati natus at, ipsam deleniti modi?</div>
+                <div class="container">When your heart speaks, take good notes</div>
             </div>
         </div>
     </div>
@@ -45,7 +48,7 @@
             <h1><strong>Notes</strong></h1>
         </legend>
         <div class="bgArea">
-            <input type="text" name="" id="note-title" placeholder="Title">
+            <input class="text-area-big" type="text" name="" id="note-title" placeholder="Title">
             <textarea name="" id="text-area-big" cols="35" rows="7" class="text-area-big" placeholder="Let's get started..."></textarea>
         </div>
     </div>
@@ -54,11 +57,14 @@
     <!-- </div> -->
 
     <div align="center">
-        <input type="submit" value="Preserve My Note" class="btn" id="add-btn">
-        <input type="reset" value="Clear" class="btn" id="">
+        <!-- <i class="far fa-save"></i> -->
+        <input type="submit" value="Add Note" class="btn" id="add-btn">
+        <input type="reset" value="Clear" class="btn" id="clrBtn">
     </div>
+    <br><br>
+    <hr><br><br>
 
-    <div class="note" id="notes">
+    <div class="alignNote" id="notes">
     </div>
 
     <script src="script.js"></script>
