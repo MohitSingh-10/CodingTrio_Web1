@@ -21,7 +21,7 @@ body {
     position: fixed;
     width: 200px;
     height: 100%;
-    background: #4b4276;
+    background: #403289;
     padding: 30px;
 }
 
@@ -168,11 +168,6 @@ body {
     border-bottom-right-radius: 5px;
 }
 
-
-/* #add-btn {
-    margin-right: 26.7%;
-} */
-
 .btn:hover {
     cursor: pointer;
     box-shadow: 2px 2px purple;
@@ -225,6 +220,9 @@ body {
     box-shadow: 3px 5px rgb(126, 119, 125);
 }
 
+
+/* notes  */
+
 #notes {
     /* display: flex; */
     height: 200px;
@@ -265,6 +263,10 @@ body {
     box-shadow: 3px 5px rgb(126, 119, 125);
 }
 
+.note-title {
+    padding: 3px;
+}
+
 #savedNotes {
     font-size: 20px;
     border-radius: 10px;
@@ -278,4 +280,44 @@ body {
 
 .container {
     font-size: 23px
+}
+
+
+/* about us  */
+
+.cards {
+    backdrop-filter: blur(5px);
+    display: flex;
+    /* border: 2px solid blue; */
+    padding: 20px 54px;
+    padding-top: 0px;
+    margin: 35px;
+    border-radius: 23px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #b688f3;
+    width: 305px;
+    box-shadow: 3px 3px #594f8d;
+    font-family: 'Crimson Text', serif;
+}
+
+.cardpack {
+    display: flex;
+    margin-left: 20%;
+    margin-top: 2%;
+}
+
+.img {
+    height: 250px;
+}
+
+.h-secondary {
+    font-size: 1.8rem;
+    padding: 5px;
+    font-family: 'Crimson Text', serif;
+}
+
+.center {
+    text-align: center;
 }
