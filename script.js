@@ -30,6 +30,15 @@ addBtn.addEventListener("click", () => {
     showNotes();
 });
 
+let clrBtn = document.getElementById("clrBtn");
+clrBtn.addEventListener("click", () => {
+    let addTitle = document.getElementById("note-title");
+    let addTxt = document.getElementById("text-area-big");
+
+    addTitle.value = null;
+    addTxt.value = null;
+});
+
 // Function to show elements from localStorage
 function showNotes() {
     let notes = localStorage.getItem("notes");
@@ -41,12 +50,14 @@ function showNotes() {
     let html = "";
     notesObj.forEach(function(element, index) {
         html += `
-        <div class="note" id = "notes">
-            <p class="note-counter">Note ${index + 1}</p>
+        <div class="note" id = "noted">
+        <div class = "nice">
+        <p class="note-counter">Note ${index + 1}</p>
             <h3 class="note-title"> ${element.title} </h3>
-            <p class="note-text"> ${element.text}</p>
-            <button id="${index}"onclick="deleteNote(this.id)" class="note-btn" id="del">Delete Note</button>
-            <button id="${index}"onclick="editNote(this.id)" class="note-btn edit-btn" id="edit">Edit Note</button>
+            <textarea name="" id="savedNotes" cols="31" rows="7"> ${element.text}</textarea>
+            <button id="${index}"onclick="deleteNote(this.id)" class="note-btn btn" id="del">Delete Note</button>
+            <button id="${index}"onclick="editNote(this.id)" class="note-btn edit-btn btn" id="edit">Edit Note</button>
+        </div>
         </div>
             `;
     });
@@ -80,6 +91,7 @@ function deleteNote(index) {
 
 // Function to Edit the Note
 function editNote(index) {
+    let cIndex = index;
     let notes = localStorage.getItem("notes");
     let addTitle = document.getElementById("note-title");
     let addTxt = document.getElementById("text-area-big");
@@ -95,11 +107,20 @@ function editNote(index) {
     }
     console.log(notesObj);
 
-    notesObj.findIndex((element, index) => {
-        addTitle.value = element.title;
-        addTxt.value = element.text;
-    })
-    notesObj.splice(index, 1);
+    // notesObj.findIndex((element) => {
+    //     addTitle.value = element.title;
+    //     addTxt.value = element.text;
+    // })
+
+    // notesObj.splice(index, 1);
+    notesObj.forEach((element, index) => {
+        if (index == cIndex) {
+            addTitle.value = element.title;
+            addTxt.value = element.text;
+            notesObj.splice(index, 1);
+            // break;
+        }
+    });
     localStorage.setItem("notes", JSON.stringify(notesObj));
     showNotes();
 }
