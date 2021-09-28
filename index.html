@@ -5,11 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+    <title>Notes.ly</title>
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" media="screen and (max-width:800px)" href="responsive.css">
@@ -39,45 +35,37 @@
         </div>
 
         <div class="main_content">
-            <div class="header"><b> Developers </b></div>
+            <div class="header"><b> Welcome!! have a nice day</b></div>
+            <div class="info">
+                <div class="container">When your heart speaks, take good notes</div>
+            </div>
         </div>
     </div>
-    <div class="cardpack">
-        <div class="cards">
-            <h2 class="h-secondary center">
-                Mohit Singh
-            </h2>
-            <img src="mohit.jpeg" alt="img" class="img">
-            <p class="center">nice guy</p>
-            <p class="center">respects whamen</p>
-            <p class="center">role: back end dev</p>
-            <a href="https://www.instagram.com/ig_mohit_singh/" target="blank" <i class="fab fa-instagram"></i>
-                ig_mohit_singh</a>
+    <div class="NotesAreaBig">
+        <legend>
+            <h1><strong>Notes</strong></h1>
+        </legend>
+        <div class="bgArea">
+            <input class="text-area-big-up" type="text" name="" id="note-title" placeholder="Title">
+            <textarea name="" id="text-area-big" cols="35" rows="7" class="text-area-big" placeholder="Let's get started..."></textarea>
         </div>
-        <div class="cards">
-            <h2 class="h-secondary center">
-                Swaraj Nayak
-            </h2>
-            <img src="swaraj.jpeg" alt="img" class="img">
-            <p class="center">nice guy</p>
-            <p class="center">respects whamen</p>
-            <p class="center">role: front end dev</p>
-            <a href="https://www.instagram.com/skipper__7/" target="blank" <i class="fab fa-instagram"></i>
-                skipper__7</a>
+    </div>
+    <!-- <div class="NotesAreaSmall"> -->
+    <!-- <textarea name="" id="text-area-small" cols="30" rows="10" class="text-area-small"></textarea> -->
+    <!-- </div> -->
 
-        </div>
-        <div class="cards">
-            <h2 class="h-secondary center">
-                Satyam Singh
-            </h2>
-            <img src="satyam.jpeg" alt="img" class="img">
-            <p class="center">nice guy</p>
-            <p class="center">respects whamen</p>
-            <p class="center">role: moral support</p>
-            <a href="https://www.instagram.com/008singhsatyam/" target="blank" <i class="fab fa-instagram"></i>
-                008singhsatyam</a>
+    <div align="center">
+        <!-- <i class="far fa-save"></i> -->
+        <input type="submit" value="Add Note" class="btn" id="add-btn">
+        <input type="reset" value="Clear" class="btn" id="clrBtn">
+    </div>
+    <br><br>
+    <hr><br><br>
 
-        </div>
+    <div class="alignNote" id="notes">
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
